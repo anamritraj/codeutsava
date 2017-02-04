@@ -68,6 +68,11 @@ Route::group(['prefix' => 'api'], function()
     // Response Controllers //
     //////////////////////////
     
+    // Save Responses
     
+    Route::post('response', "ResponseController@saveResponse");
+
+    // By hospital_id 
+    Route::get('response/{hospital_id}', "ResponseController@getResponseByHosptId");
 });
 

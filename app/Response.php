@@ -13,8 +13,11 @@ class Response extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        "category_id",
-        "name",
+        "id",
+        "reciept_id",
+        "hospital_id",
+        "question_id",
+        "response",
     ];
 
     /**
@@ -23,5 +26,7 @@ class Response extends Authenticatable
      * @var array
      */
     protected $hidden = [
+        "created_at",
+        "updated_at"
     ];
 }
