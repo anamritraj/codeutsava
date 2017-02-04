@@ -3,12 +3,9 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable
 {
-    use EntrustUserTrait;
-
     /**
      * The attributes that are mass assignable.
      *
@@ -16,10 +13,10 @@ class User extends Authenticatable
      */
     protected $fillable = [
         "name",
-        "aadhar_id",
         "email",
-        "contact",
-        "unique_id"
+        "aadhar_id",
+        "mobile",
+        "unique_token",
     ];
 
     /**
@@ -28,8 +25,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
+        "id"
         "created_at",
         "updated_at",
-        "id"
     ];
 }

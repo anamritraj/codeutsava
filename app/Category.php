@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Hospital extends Authenticatable
+class Category extends Authenticatable
 {
 
     /**
@@ -13,11 +13,8 @@ class Hospital extends Authenticatable
      * @var array
      */
     protected $fillable = [
+        "category_id",
         "name",
-        "address",
-        "avg_rating",
-        "contact_info",
-        "specialiations",
     ];
 
     /**
@@ -26,6 +23,5 @@ class Hospital extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        "id"
     ];
 }
