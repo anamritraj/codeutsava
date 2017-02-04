@@ -14,7 +14,7 @@ class User extends Authenticatable
     protected $fillable = [
         "name",
         "email",
-        "aadhar_id",
+        "adhar_id",
         "mobile",
         "unique_token",
     ];
@@ -25,7 +25,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        "id"
+        "id",
         "created_at",
         "updated_at",
     ];
