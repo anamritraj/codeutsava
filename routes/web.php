@@ -18,42 +18,16 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'api'], function()
 {
-	/////////////////
-	// User Routes //
-	/////////////////
+	//////////////////////
+	// Questions Routes //
+	//////////////////////
 
-	// Authenticate User
-    Route::post('authenticate', 'UserController@authenticate');
+    // Get All Questions
+    Route::get('question', 'QuestionController@index');
     
-    // Get user
-    Route::get('user', 'UserController@getUser');
+    // Get Category Questions
+    Route::get('question/{category_id}', 'QuestionController@getQuestion');
     
-    // Register a new User
-    Route::post('register', 'UserController@register');
-    
-    // Update user Events
-    Route::post('user/events', 'UserController@updateUserEvents');
-
-    /////////////////
-    //Event Routes //
-    /////////////////
-    
-    // Get All events
-    Route::get('event', 'EventController@index');
-
-	// Get event by event_slug
-    Route::get('event/{event_slug}', 'EventController@getEvent');
-
-    // Create a new Event
-    Route::post('event', 'EventController@createEvent');
-
-    // Update Event
-    Route::put('event', 'EventController@updateEvent');
-    
-    // Delete Event
-    // Note to self: Do not allow anyone to delete the events.
-    Route::delete('event/{event_slug}', 'EventController@deleteEvent');
-
     /////////////////////
     // Category Routes //
     /////////////////////
@@ -72,6 +46,23 @@ Route::group(['prefix' => 'api'], function()
     
     // Delete Category
     Route::delete('category/{id}', 'CategoryController@deleteCategory');
+
+    ////////////////
+    // UserRoutes //
+    ////////////////
+	
+    // Add user
+    Route::post('user', 'UserController@createUser');
+
+    // Get user
+    Route::get('user/{aadhar_no}', 'UserController@getUser'); 
+
+    /////////////////////
+    // Hospital Routes //
+    /////////////////////
     
+	// Get hospital
+    Route::get('hospital/{hospital_id}', 'HospitalController@getHospital'); 
+
 });
 
