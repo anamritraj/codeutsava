@@ -4,19 +4,17 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Question extends Authenticatable
+class Response extends Authenticatable
 {
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        "question",
-        "isValid",
         "category_id",
-        "question_description",
-        "id",
+        "name",
     ];
 
     /**

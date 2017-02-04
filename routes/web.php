@@ -64,5 +64,10 @@ Route::group(['prefix' => 'api'], function()
 	// Get hospital
     Route::get('hospital/{hospital_id}', 'HospitalController@getHospital'); 
 
+    //////////////////////////
+    // Response Controllers //
+    //////////////////////////
+    
+    
 });
 
