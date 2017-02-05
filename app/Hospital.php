@@ -13,6 +13,7 @@ class Hospital extends Authenticatable
      * @var array
      */
     protected $fillable = [
+        "id",
         "name",
         "address",
         "avg_rating",
@@ -26,6 +27,5 @@ class Hospital extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        "id"
     ];
 }

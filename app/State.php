@@ -4,9 +4,8 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Response extends Authenticatable
+class State extends Authenticatable
 {
-
     /**
      * The attributes that are mass assignable.
      *
@@ -14,10 +13,7 @@ class Response extends Authenticatable
      */
     protected $fillable = [
         "id",
-        "receipt_id",
-        "hospital_id",
-        "question_id",
-        "response",
+        "name",
     ];
 
     /**
@@ -27,6 +23,6 @@ class Response extends Authenticatable
      */
     protected $hidden = [
         "created_at",
-        "updated_at"
+        "updated_at",
     ];
 }

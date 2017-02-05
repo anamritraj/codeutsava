@@ -72,7 +72,21 @@ Route::group(['prefix' => 'api'], function()
     
     Route::post('response', "ResponseController@saveResponse");
 
-    // By hospital_id 
-    Route::get('response/{hospital_id}', "ResponseController@getResponseByHosptId");
+
+    //////////////////////
+    // GRPAHS ENDPOINTS //
+    //////////////////////
+
+    // For DISTRICTS
+
+    Route::get('graph/districts', "GraphController@getDistricts");
+    
+    // FOR HOSPITALS
+    
+    Route::get('graph/get-hospitals/{district_id}', "GraphController@getHospitals");
+
+    Route::get('graph/overall-yearly-hospital/{hospital_id}', "GraphController@GetYearlyOverallDataHospitals");
+    
+
 });
 
